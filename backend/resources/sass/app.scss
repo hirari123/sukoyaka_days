@@ -7,17 +7,8 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
-// Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
-
-// Variables
-@import 'variables';
-
-// Bootstrap
-@import '~bootstrap/scss/bootstrap';
 
 
-// --- ここから追加 ---
 .navbar-laravel {
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
@@ -35,16 +26,58 @@ body {
 }
 
 nav {
-  background-color: #55C501 !important;
+  background-color: rgba(255, 255, 255, 0.8);
   #Navber {
     .navbar-nav {
       .nav-item {
-        // 投稿するボタンの背景を深緑にする
+        // 投稿するボタンの背景を赤にする
         #post-link {
-          background-color: #367E00;
+          background-color: #fc454e;
           border-radius: 5px;
           padding-left: 1rem;
           padding-right: 1rem;
+        }
+
+        #register {
+          border: solid 2px #fff;
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+}
+
+#login-wrapper {
+  background-color: #fc454e;
+  .col-7 {
+    padding: 100px 0 100px 80px;
+    h1 {
+      font-size: 50px;
+    }
+  }
+  .col-5 {
+    form {
+      margin: 50px 30px 0 0;
+      table {
+        border-collapse: separate;
+        border-spacing: 0px 15px;
+        tr {
+          th {
+            font-size: 10px;
+            color: #000;
+            width: 80px;
+          }
+          td {
+            .form-control {
+              height: 45px;
+            }
+            input[type="submit"] {
+              width: 110px;
+              color: #fc454e;
+              background-color: #fff;
+              border: solid 2px #000;
+            }
+          }
         }
       }
     }
