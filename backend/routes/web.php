@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Auth\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,5 +20,10 @@ Route::get('/', function () {
 
 Route::get('/home', 'HomeController@index')->name('home');
 Auth::routes();
+
+Route::get('/drafts/new', 'App\Http\Controllers\Auth\PostController@index')->name('drafts.new');
+
+Route::get('/', [PostController::class, 'index']);
+
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
