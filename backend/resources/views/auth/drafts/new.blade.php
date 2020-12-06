@@ -19,7 +19,7 @@
   <input type="text" class="form-control m-1" placeholder="腰痛対策に関するタグをスペース区切りで3つまで入力" name="tags">
 
   <!-- バリデーション body -->
-  @if($errors->first('body'))
+  @if($errors->first('article'))
     <div class="validation">{{$errors->first('article')}}</div>
   @endif
 
