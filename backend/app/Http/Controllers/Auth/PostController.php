@@ -18,7 +18,7 @@ class PostController extends Controller
     {
         // バリデーション
         $request->validate([
-            'title'=>'required|max:255',
+            'title'=>'required|unique:posts|max:255',
             'tags'=>'required|string',
             'article'=>'required|string',
         ]);
@@ -36,6 +36,14 @@ class PostController extends Controller
             'tag3'=>$tag3,
             'body'=>$request->article,
         ]);
-        return redirect('/');
+        // 記事を投稿したら個別記事画面にリダイレクト
+        return redirect('/drafts/{$article->id}');
+    }
+
+    // アクセスされた時に個別記事をビューに返す
+    public function showArticle($id)
+    {
+        $article = Post::where('id', $id)->first();
+        return view('auth.item', compact('article'));
     }
 }
