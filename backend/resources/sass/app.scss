@@ -163,3 +163,63 @@ nav {
   color: #fc454e;
   font-size: 14px;
 }
+
+// 個別の記事ページ
+
+.item-page-wrapper {
+  background-color: #f8f9fc;
+  .item-wrapper {
+    background-color: #fff;
+    margin: 3rem 5rem;
+    padding: 3rem;
+    .item-header {
+      .date {
+        color: #555555;
+      }
+    }
+    .item-title {
+      font-size: 2rem;
+      margin-top: 1.2rem;
+      font-weight: 400;
+    }
+    .item-tags {
+      .item-tag {
+        background-color: #555555;
+        display: inline-flex;
+        padding: 0.3rem;
+        color: #666;
+      }
+    }
+    .item-body {
+      margin-top: 2rem;
+      h1 {
+        font-size: 1.8rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        padding-bottom: 0.2rem;
+        border-bottom: solid 1px #ddd;
+      }
+      h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        padding-bottom: 0.2rem;
+        border-bottom: solid 1px #ddd;
+      }
+      h3 {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        padding-bottom: 0.2rem;
+        border-bottom: solid 1px #ddd;
+      }
+      pre {
+        code {
+          color: #fff;
+          padding: 1.5rem 1rem;
+          background-color: #364549;
+          width: 100%;
+          display: block;
+        }
+      }
+    }
+  }
+}
