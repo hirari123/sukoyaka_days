@@ -25,5 +25,10 @@ Route::get('/drafts/new', 'App\Http\Controllers\Auth\PostController@index')->nam
 
 Route::get('/', [PostController::class, 'index']);
 
+// 記事を投稿する時、postリクエストを送る
+Route::post('/drafts/new', 'App\Http\Controllers\Auth\PostController@postArticle')->name('drafts.new.posts');
+
+Route::get('/', [PostController::class, 'postArticle']);
+
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
