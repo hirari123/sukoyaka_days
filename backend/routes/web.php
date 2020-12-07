@@ -14,12 +14,14 @@ use App\Http\Controllers\Auth\PostController;
 |
 */
 
-Route::get('/', function () {
-    return view('top');
-});
+// トップページを表示
+Route::get('/', 'App\Http\Controllers\Auth\PostController@showTopPage')->name('top');
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', [PostController::class, 'showTopPage']);
+
+
 Auth::routes();
+Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/drafts/new', 'App\Http\Controllers\Auth\PostController@index')->name('drafts.new');
 
@@ -34,5 +36,6 @@ Route::get('/', [PostController::class, 'postArticle']);
 Route::get('/drafts/{id}', 'App\Http\Controllers\Auth\PostController@showArticle')->name('item');
 
 Route::get('/', [PostController::class, 'showArticle']);
+
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
