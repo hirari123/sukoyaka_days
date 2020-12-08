@@ -23,7 +23,7 @@ class PostController extends Controller
             'article'=>'required|string',
         ]);
 
-        $tags = explode('', $request->tags);
+        $tags = explode(' ', $request->tags);
         $tag1 = $tags[0];
         $tag2 = (isset($tags[1])) ? $tags[1] : null;
         $tag3 = (isset($tags[2])) ? $tags[2] : null;
@@ -37,7 +37,7 @@ class PostController extends Controller
             'body'=>$request->article,
         ]);
         // 記事を投稿したら個別記事画面にリダイレクト
-        return redirect('/drafts/{$article->id}');
+        return redirect("/drafts/{$article->id}");
     }
 
     // アクセスされた時に個別記事をビューに返す
