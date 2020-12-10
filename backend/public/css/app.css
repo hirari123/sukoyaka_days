@@ -10920,27 +10920,29 @@ body {
 }
 
 nav {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: #55C501 !important;
 }
 
 nav #Navber .navbar-nav .nav-item #post-link {
-  background-color: #fc454e;
+  background-color: #367E00;
   border-radius: 5px;
   padding-left: 1rem;
   padding-right: 1rem;
 }
 
 nav #Navber .navbar-nav .nav-item #register {
-  border: solid 2px #fff;
+  border: solid 2px white;
   border-radius: 10px;
 }
 
 #login-wrapper {
-  background-color: #fc454e;
+  background-color: #55C501;
 }
 
 #login-wrapper .col-7 {
-  padding: 100px 0 100px 80px;
+  padding-left: 80px;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 #login-wrapper .col-7 h1 {
@@ -10948,7 +10950,8 @@ nav #Navber .navbar-nav .nav-item #register {
 }
 
 #login-wrapper .col-5 form {
-  margin: 50px 30px 0 0;
+  margin-top: 50px;
+  margin-right: 30px;
 }
 
 #login-wrapper .col-5 form table {
@@ -10958,7 +10961,7 @@ nav #Navber .navbar-nav .nav-item #register {
 
 #login-wrapper .col-5 form table tr th {
   font-size: 10px;
-  color: #000;
+  color: white;
   width: 80px;
 }
 
@@ -10968,9 +10971,9 @@ nav #Navber .navbar-nav .nav-item #register {
 
 #login-wrapper .col-5 form table tr td input[type=submit] {
   width: 110px;
-  color: #fc454e;
-  background-color: #fff;
-  border: solid 2px #000;
+  color: white;
+  background-color: #55C501;
+  border: solid 2px white;
 }
 
 .post-page-wrapper #title-input {
@@ -10994,7 +10997,7 @@ nav #Navber .navbar-nav .nav-item #register {
 }
 
 .post-page-wrapper .row .col-6 {
-  padding: 0;
+  padding: 0rem;
   flex: none;
   width: 48%;
 }
@@ -11008,10 +11011,10 @@ nav #Navber .navbar-nav .nav-item #register {
 .post-page-wrapper .row .col-6 #markdown_preview {
   padding: 1rem;
   height: 29rem;
-  border: solid 1px #888888;
+  border: solid 1px gray;
   width: 100%;
-  background-color: #fff;
-  border: solid 1px #ced4da;
+  background-color: white;
+  border: 1px solid #ced4da;
   border-radius: 0.25rem;
   color: #495057;
 }
@@ -11039,7 +11042,7 @@ nav #Navber .navbar-nav .nav-item #register {
 }
 
 .post-page-wrapper .row .col-6 #markdown_preview pre code {
-  color: #fff;
+  color: white;
   padding: 1.5rem 1rem;
   background-color: #364549;
   width: 100%;
@@ -11052,16 +11055,16 @@ nav #Navber .navbar-nav .nav-item #register {
 }
 
 .post-page-wrapper .post-page-footer .post-button {
-  background-color: #fc454e;
-  color: #fff;
+  background-color: #55C501;
+  color: white;
   border-radius: 0.25rem;
   width: 7rem;
   height: 2rem;
-  margin-right: 1rem;
+  margin-right: 1rem !important;
 }
 
 .validation {
-  color: #fc454e;
+  color: red;
   font-size: 14px;
 }
 
@@ -11070,23 +11073,23 @@ nav #Navber .navbar-nav .nav-item #register {
 }
 
 .item-page-wrapper .item-wrapper {
-  background-color: #fff;
+  background-color: white;
   margin: 3rem 5rem;
   padding: 3rem;
 }
 
 .item-page-wrapper .item-wrapper .item-header .date {
-  color: #555555;
+  color: gray;
 }
 
 .item-page-wrapper .item-wrapper .item-title {
   font-size: 2rem;
   margin-top: 1.2rem;
-  font-weight: 400;
+  font-weight: bold;
 }
 
 .item-page-wrapper .item-wrapper .item-tags .item-tag {
-  background-color: #555555;
+  background-color: gray;
   display: inline-flex;
   padding: 0.3rem;
   color: #666;
@@ -11119,10 +11122,48 @@ nav #Navber .navbar-nav .nav-item #register {
 }
 
 .item-page-wrapper .item-wrapper .item-body pre code {
-  color: #fff;
+  color: white;
   padding: 1.5rem 1rem;
   background-color: #364549;
   width: 100%;
   display: block;
+}
+
+.top-wrapper {
+  background-color: #F6F6F6;
+  padding: 40px 0px;
+  height: 100vh;
+}
+
+.top-wrapper .articles-wrapper {
+  background-color: white;
+  margin: 0px auto;
+  padding: 20px;
+}
+
+.top-wrapper .articles-wrapper .article-box {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border-bottom: solid 3px #F6F6F6;
+}
+
+.top-wrapper .articles-wrapper .article-box .article-box-left {
+  height: 40px;
+  width: 40px;
+  background-color: gray;
+  border-radius: 5px;
+}
+
+.top-wrapper .articles-wrapper .article-box .article-box-right {
+  padding-left: 20px;
+}
+
+.top-wrapper .articles-wrapper .article-box .article-box-right .article-title {
+  font-weight: bold;
+}
+
+.top-wrapper .articles-wrapper .article-box .article-box-right .article-date {
+  color: gray;
 }
 
