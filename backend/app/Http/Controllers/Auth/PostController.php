@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Post;
+use App\Models\Post;
 use Illuminate\Support\Facades\Auth;
 
 class PostController extends Controller
@@ -12,6 +12,13 @@ class PostController extends Controller
     public function index()
     {
         return view('auth.drafts.new');
+    }
+
+    // 記事一覧画面を表示
+    public function showTopPage()
+    {
+        $articles = Post::orderBy('created_at', 'asc')->get();
+        return view('top', compact('articles'));
     }
 
     public function postArticle(Request $request)
@@ -29,7 +36,7 @@ class PostController extends Controller
         $tag3 = (isset($tags[2])) ? $tags[2] : null;
 
         $article = Post::create([
-            'user_id'=>Auth::user()->id,
+            'user_id'=>999,
             'title'=>$request->title,
             'tag1'=>$tag1,
             'tag2'=>$tag2,
@@ -41,7 +48,7 @@ class PostController extends Controller
     }
 
     // アクセスされた時に個別記事をビューに返す
-    public function showArticle($id)
+    public function showArticle(Id $id)
     {
         $article = Post::where('id', $id)->first();
         return view('auth.item', compact('article'));
