@@ -48,7 +48,7 @@ class PostController extends Controller
     }
 
     // アクセスされた時に個別記事をビューに返す
-    public function showArticle(Id $id)
+    public function showArticle($id)
     {
         $article = Post::where('id', $id)->first();
         return view('auth.item', compact('article'));
