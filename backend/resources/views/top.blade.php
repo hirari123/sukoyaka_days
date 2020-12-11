@@ -41,7 +41,7 @@
     <div class="article-box">
       <div class="article-box-left"></div>
       <div class="article-box-right">
-        <a href="/drafts/{{$article-id}}" class="article-title">{{$article->title}}</a>
+        <a href="/drafts/{{$article->id}}" class="article-title">{{$article->title}}</a>
         <div class="article-details">
           <div class="article-date">{{$article->created_at}}</div>
         </div>
