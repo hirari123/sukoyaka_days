@@ -35,7 +35,7 @@ Route::get('/', [PostController::class, 'postArticle'])->name('drafts.new.posts'
 // 実際に投稿された記事の内容を表示
 Route::get('/drafts/{id}', 'App\Http\Controllers\Auth\PostController@showArticle')->name('item');
 
-Route::get('/', [PostController::class, 'showArticle'])->name('item');
+Route::get('/drafts/{id}', [PostController::class, 'showArticle'])->name('item');
 
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
